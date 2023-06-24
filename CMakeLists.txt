@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8)
+project( RayCastingSimulation )
+find_package( OpenCV REQUIRED )
+add_executable( SpatialMapping SpatialMapping.cpp Simulation.cpp Ray.cpp )
+target_link_libraries( SpatialMapping ${OpenCV_LIBS} )
+add_executable( PathFinder PathFinder.cpp Simulation.cpp Ray.cpp )
+target_link_libraries( PathFinder ${OpenCV_LIBS} )
